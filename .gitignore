@@ -1,0 +1,27 @@
+# 依赖和本地配置
+node_modules/
+.env
+.claude/settings.local.json
+
+# 用户自己的项目、生成物和缓存
+projects/
+generated/
+.cache/
+dist/
+*.log
+*.zip
+
+# 入库过程的临时文件和 AI 工作笔记
+work/
+.workbuddy/
+
+# 原模板 .pptx 和图片备份（动效信息已抽到 source/motion_source.*）
+templates/*/source/*.pptx
+templates/*/assets/_backup_*/
+
+# 系统和 Python 缓存
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc

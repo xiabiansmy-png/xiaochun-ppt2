@@ -1,0 +1,112 @@
+{
+  "source": "新设计（原模板「文艺清新毕业论文答辩」.pptx 本身没有任何翻页和动画，按用户要求设计了一套克制的动效）",
+  "_note": "原模板 20 页的 <p:transition/> 都是空的、也没有 <p:timing>。这里的效果全部是新设计：统一淡出翻页 0.7 秒；每页单击一次，标题先出，正文依次淡入（同一下单击里自动接着播放）。effects 的 XML 是 PowerPoint 标准写法：淡出（presetID 10）、擦除自左侧（presetID 22 / subtype 8）。",
+  "transition": "fade",
+  "transitions": {
+    "fade": {
+      "name": "淡出 0.7 秒（平滑）",
+      "xml": "<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\"><mc:Choice Requires=\"p14\"><p:transition spd=\"slow\" p14:dur=\"700\"><p:fade/></p:transition></mc:Choice><mc:Fallback><p:transition spd=\"slow\"><p:fade/></p:transition></mc:Fallback></mc:AlternateContent>",
+      "from": "新设计"
+    }
+  },
+  "effects": {
+    "fade": {
+      "name": "进入·淡出",
+      "durMs": 600,
+      "from": "新设计",
+      "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"10\" presetClass=\"entr\" presetSubtype=\"0\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"600\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+    },
+    "wipeLeft": {
+      "name": "进入·擦除（自左侧）",
+      "durMs": 500,
+      "from": "新设计（PowerPoint 标准效果 XML）",
+      "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"22\" presetClass=\"entr\" presetSubtype=\"8\" dur=\"500\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"wipe(left)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+    }
+  },
+  "pages": {
+    "cover": [
+      {
+        "g": "title",
+        "fx": "fade",
+        "_from": "新设计：单击后主标题淡入，副标题、说明、标签自动跟上"
+      },
+      {
+        "g": "sub",
+        "fx": "fade",
+        "trig": "after"
+      }
+    ],
+    "closing": [
+      {
+        "g": "title",
+        "fx": "fade",
+        "_from": "同封面"
+      },
+      {
+        "g": "sub",
+        "fx": "fade",
+        "trig": "after"
+      }
+    ],
+    "toc": [
+      {
+        "g": "head",
+        "fx": "wipeLeft",
+        "_from": "新设计：「目录」从左擦出，条目依次淡入"
+      },
+      {
+        "g": "item*",
+        "fx": "fade",
+        "trig": "after"
+      }
+    ],
+    "section": [
+      {
+        "g": "sec",
+        "fx": "fade",
+        "_from": "新设计：章节编号、标题整块淡入"
+      }
+    ],
+    "quote": [
+      {
+        "g": "quote",
+        "fx": "fade",
+        "_from": "新设计：同章节页"
+      }
+    ],
+    "timeline": [
+      {
+        "g": "header",
+        "fx": "wipeLeft",
+        "_from": "新设计：页眉从左擦出 → 时间轴擦出 → 各节点依次淡入"
+      },
+      {
+        "g": "body",
+        "fx": "fade",
+        "trig": "after"
+      },
+      {
+        "g": "axis",
+        "fx": "wipeLeft",
+        "trig": "after"
+      },
+      {
+        "g": "item*",
+        "fx": "fade",
+        "trig": "after"
+      }
+    ],
+    "default": [
+      {
+        "g": "header",
+        "fx": "wipeLeft",
+        "_from": "新设计：内容页单击一次，页眉从左擦出，正文接着淡入"
+      },
+      {
+        "g": "body",
+        "fx": "fade",
+        "trig": "after"
+      }
+    ]
+  }
+}

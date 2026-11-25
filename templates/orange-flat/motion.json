@@ -1,0 +1,693 @@
+{
+ "source": "工作总结汇报 PPT 模板（橙色扁平长投影，tools/motion_extract.py 抽取）",
+ "autoStart": true,
+ "_autoStart": "原模板每页动画都在翻页后自动连播，没有需要单击的步骤",
+ "transition": "doors",
+ "transitions": {
+  "doors": {
+   "name": "门 1.4 秒（低版本 PowerPoint 显示为淡出）",
+   "from": "原模板第 1–25 页",
+   "xml": "<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"><mc:Choice xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" Requires=\"p14\"><p:transition spd=\"slow\" p14:dur=\"1400\"><p14:doors dir=\"vert\"/></p:transition></mc:Choice><mc:Fallback><p:transition spd=\"slow\"><p:fade/></p:transition></mc:Fallback></mc:AlternateContent>"
+  }
+ },
+ "effects": {
+  "flyTR1000": {
+   "name": "进入·飞入（自右上）",
+   "durMs": 1000,
+   "from": "原模板第 1, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"3\" decel=\"100000\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"1+#ppt_w/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyBL1000": {
+   "name": "进入·飞入（自左下）",
+   "durMs": 1000,
+   "from": "原模板第 1, 2, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"12\" decel=\"100000\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_w/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"1+#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyTL1000": {
+   "name": "进入·飞入（自左上）",
+   "durMs": 1000,
+   "from": "原模板第 1, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"9\" decel=\"100000\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_w/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyB1000": {
+   "name": "进入·飞入（自底部）",
+   "durMs": 1000,
+   "from": "原模板第 1, 3, 9, 15, 20, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"4\" decel=\"100000\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"1+#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "fade": {
+   "name": "进入·淡化",
+   "durMs": 500,
+   "from": "原模板第 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 22, 24, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"10\" presetClass=\"entr\" presetSubtype=\"0\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyL": {
+   "name": "进入·飞入（自左侧）",
+   "durMs": 500,
+   "from": "原模板第 1, 12, 14, 19, 22, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"8\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_w/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "float": {
+   "name": "进入·浮入",
+   "durMs": 1000,
+   "from": "原模板第 1, 2, 3, 5, 6, 9, 10, 11, 15, 19, 20, 24, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"42\" presetClass=\"entr\" presetSubtype=\"0\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_y+.1\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "wipeL": {
+   "name": "进入·擦除（自左侧）",
+   "durMs": 500,
+   "from": "原模板第 1, 4, 7, 8, 16, 18, 19, 23, 24, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"22\" presetClass=\"entr\" presetSubtype=\"8\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"wipe(left)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "zoom": {
+   "name": "进入·基本缩放",
+   "durMs": 500,
+   "from": "原模板第 1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 15, 16, 17, 20, 21, 25 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"53\" presetClass=\"entr\" presetSubtype=\"16\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_w</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:fltVal val=\"0\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_w\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_h</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:fltVal val=\"0\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_h\"/></p:val></p:tav></p:tavLst></p:anim><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "descend": {
+   "name": "进入·下降",
+   "durMs": 1000,
+   "from": "原模板第 2, 3, 9, 10, 15, 20 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"47\" presetClass=\"entr\" presetSubtype=\"0\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_y-.1\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "peekL": {
+   "name": "进入·切入（自左侧）",
+   "durMs": 500,
+   "from": "原模板第 2 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"12\" presetClass=\"entr\" presetSubtype=\"8\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x-#ppt_w*1.125000\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:animEffect transition=\"in\" filter=\"wipe(right)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyR": {
+   "name": "进入·飞入（自右侧）",
+   "durMs": 500,
+   "from": "原模板第 4, 12, 14, 21, 22, 23 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"2\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"1+#ppt_w/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "wipeT": {
+   "name": "进入·擦除（自顶部）",
+   "durMs": 500,
+   "from": "原模板第 4 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"22\" presetClass=\"entr\" presetSubtype=\"1\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"wipe(up)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyB": {
+   "name": "进入·飞入（自底部）",
+   "durMs": 500,
+   "from": "原模板第 5, 8, 14, 17 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"4\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"1+#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "flip": {
+   "name": "进入·翻转式由远及近",
+   "durMs": 1000,
+   "from": "原模板第 7, 12, 18, 22 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"31\" presetClass=\"entr\" presetSubtype=\"0\" fill=\"hold\" grpId=\"0\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_w</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:fltVal val=\"0\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_w\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_h</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:fltVal val=\"0\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_h\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.rotation</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:fltVal val=\"90\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:fltVal val=\"0\"/></p:val></p:tav></p:tavLst></p:anim><p:animEffect transition=\"in\" filter=\"fade\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1000\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "bars": {
+   "name": "进入·随机线条（水平）",
+   "durMs": 500,
+   "from": "原模板第 10 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"14\" presetClass=\"entr\" presetSubtype=\"10\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"randombar(horizontal)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  },
+  "flyT": {
+   "name": "进入·飞入（自顶部）",
+   "durMs": 500,
+   "from": "原模板第 17 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"2\" presetClass=\"entr\" presetSubtype=\"1\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_x</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_x\"/></p:val></p:tav></p:tavLst></p:anim><p:anim calcmode=\"lin\" valueType=\"num\"><p:cBhvr additive=\"base\"><p:cTn id=\"{ID}\" dur=\"500\" fill=\"hold\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>ppt_y</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst><p:tav tm=\"0\"><p:val><p:strVal val=\"0-#ppt_h/2\"/></p:val></p:tav><p:tav tm=\"100000\"><p:val><p:strVal val=\"#ppt_y\"/></p:val></p:tav></p:tavLst></p:anim></p:childTnLst></p:cTn></p:par>"
+  },
+  "wipeR": {
+   "name": "进入·擦除（自右侧）",
+   "durMs": 500,
+   "from": "原模板第 23 页",
+   "xml": "<p:par><p:cTn id=\"{ID}\" presetID=\"22\" presetClass=\"entr\" presetSubtype=\"2\" fill=\"hold\" nodeType=\"{NODE}\"><p:stCondLst><p:cond delay=\"{DELAY}\"/></p:stCondLst><p:childTnLst><p:set><p:cBhvr><p:cTn id=\"{ID}\" dur=\"1\" fill=\"hold\"><p:stCondLst><p:cond delay=\"0\"/></p:stCondLst></p:cTn><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr><p:to><p:strVal val=\"visible\"/></p:to></p:set><p:animEffect transition=\"in\" filter=\"wipe(right)\"><p:cBhvr><p:cTn id=\"{ID}\" dur=\"500\"/><p:tgtEl><p:spTgt spid=\"{SPID}\"/></p:tgtEl></p:cBhvr></p:animEffect></p:childTnLst></p:cTn></p:par>"
+  }
+ },
+ "pages": {
+  "cover": [
+   {
+    "g": "photo",
+    "fx": "flyTR1000",
+    "trig": "with",
+    "_from": "原第 1 页：右侧大照片飞入（自右上）"
+   },
+   {
+    "g": "pick",
+    "fx": "flyBL1000",
+    "trig": "with"
+   },
+   {
+    "g": "dot",
+    "fx": "flyTL1000",
+    "trig": "with"
+   },
+   {
+    "g": "pick2",
+    "fx": "flyB1000",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "nav",
+    "fx": "flyL",
+    "trig": "after"
+   },
+   {
+    "g": "title",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "sub",
+    "fx": "wipeL",
+    "trig": "after"
+   },
+   {
+    "g": "desc",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "tag",
+    "fx": "zoom",
+    "trig": "after"
+   },
+   {
+    "g": "menu",
+    "fx": "fade",
+    "trig": "after"
+   }
+  ],
+  "closing": [
+   {
+    "g": "photo",
+    "fx": "flyTR1000",
+    "trig": "with",
+    "_from": "原第 25 页：右侧大照片飞入（自右上）"
+   },
+   {
+    "g": "pick",
+    "fx": "flyBL1000",
+    "trig": "with"
+   },
+   {
+    "g": "dot",
+    "fx": "flyTL1000",
+    "trig": "with"
+   },
+   {
+    "g": "pick2",
+    "fx": "flyB1000",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "nav",
+    "fx": "flyL",
+    "trig": "after"
+   },
+   {
+    "g": "title",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "sub",
+    "fx": "wipeL",
+    "trig": "after"
+   },
+   {
+    "g": "desc",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "tag",
+    "fx": "zoom",
+    "trig": "after"
+   },
+   {
+    "g": "menu",
+    "fx": "fade",
+    "trig": "after"
+   }
+  ],
+  "toc": [
+   {
+    "g": "pick",
+    "fx": "flyBL1000",
+    "trig": "after",
+    "_from": "原第 2 页"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "ttl",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "en",
+    "fx": "descend",
+    "trig": "with"
+   },
+   {
+    "g": "num",
+    "fx": "zoom",
+    "trig": "after"
+   },
+   {
+    "g": "numShadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "item*",
+    "fx": "peekL",
+    "trig": "after",
+    "rest": "after"
+   }
+  ],
+  "section": [
+   {
+    "g": "pick",
+    "fx": "flyB1000",
+    "trig": "with",
+    "_from": "原第 3/9/15/20 页"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "part",
+    "fx": "zoom",
+    "trig": "after"
+   },
+   {
+    "g": "title",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "desc",
+    "fx": "descend",
+    "trig": "with"
+   }
+  ],
+  "quote": [
+   {
+    "g": "pick",
+    "fx": "flyB1000",
+    "trig": "with",
+    "_from": "新设计页，沿用章节页（原第 3 页）的动效"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "mark",
+    "fx": "zoom",
+    "trig": "after"
+   },
+   {
+    "g": "text",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "author",
+    "fx": "descend",
+    "trig": "with"
+   }
+  ],
+  "points3.picks": [
+   {
+    "g": "pic*",
+    "fx": "zoom",
+    "trig": "after",
+    "rest": "with",
+    "_from": "原第 11 页：三张拨片照片同时缩放进入 → 三段文字同时浮入"
+   },
+   {
+    "g": "txt*",
+    "fx": "float",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "float",
+    "trig": "with"
+   }
+  ],
+  "points3.cards": [
+   {
+    "g": "card*",
+    "fx": "zoom",
+    "trig": "with",
+    "rest": "with",
+    "_from": "原第 13 页：卡片同时缩放进入 → 投影淡入"
+   },
+   {
+    "g": "note",
+    "fx": "zoom",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   }
+  ],
+  "points4.cards": [
+   {
+    "g": "card*",
+    "fx": "zoom",
+    "trig": "with",
+    "rest": "with",
+    "_from": "原第 13 页"
+   },
+   {
+    "g": "note",
+    "fx": "zoom",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   }
+  ],
+  "points4.rings": [
+   {
+    "g": "ring*",
+    "fx": "flyR",
+    "trig": "with",
+    "rest": "with",
+    "_from": "原第 21 页：圆环同时飞入（自右侧）→ 文字同时缩放进入"
+   },
+   {
+    "g": "txt*",
+    "fx": "zoom",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "zoom",
+    "trig": "with"
+   }
+  ],
+  "points4.hub": [
+   {
+    "g": "hub",
+    "fx": "zoom",
+    "trig": "with",
+    "_from": "原第 17 页：中心照片和图标缩放进入 → 左侧文字自底飞入、右侧自顶飞入"
+   },
+   {
+    "g": "item*",
+    "fx": [
+     "flyB",
+     "flyB",
+     "flyT",
+     "flyT"
+    ],
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "flyB",
+    "trig": "with"
+   }
+  ],
+  "compare.blocks": [
+   {
+    "g": "photo",
+    "fx": "bars",
+    "trig": "with",
+    "_from": "原第 10 页：照片随机线条 → 上块浮入、下块下降 → 投影淡入"
+   },
+   {
+    "g": "left",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "right",
+    "fx": "descend",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "note",
+    "fx": "fade",
+    "trig": "with"
+   }
+  ],
+  "compare.frames": [
+   {
+    "g": "frame*",
+    "fx": "float",
+    "trig": "after",
+    "rest": "with",
+    "_from": "原第 24 页：两个相框同时浮入 → 投影淡入 → 文字从左擦除"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "txt*",
+    "fx": "wipeL",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "with"
+   }
+  ],
+  "stats.bars": [
+   {
+    "g": "pic",
+    "fx": "flip",
+    "trig": "after",
+    "_from": "原第 7 页：拨片照片翻转进入 → 投影 → 标签缩放 → 进度条从左擦除 → 投影 → 说明从左擦除"
+   },
+   {
+    "g": "picShadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "label*",
+    "fx": "zoom",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "bar*",
+    "fx": "wipeL",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "barShadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "after"
+   }
+  ],
+  "stats.peaks": [
+   {
+    "g": "peaks",
+    "fx": "flyB",
+    "trig": "after",
+    "_from": "原第 8 页：山峰和数字自底飞入 → 投影淡入 → 文字从左擦除"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "txt",
+    "fx": "wipeL",
+    "trig": "after"
+   }
+  ],
+  "stats.numbers": [
+   {
+    "g": "ring*",
+    "fx": "flyR",
+    "trig": "with",
+    "rest": "with",
+    "_from": "新设计，沿用原第 21 页圆环的动效"
+   },
+   {
+    "g": "txt*",
+    "fx": "zoom",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "zoom",
+    "trig": "with"
+   }
+  ],
+  "timeline.line": [
+   {
+    "g": "line",
+    "fx": "flyR",
+    "trig": "after",
+    "_from": "原第 23 页：时间轴和图标整组飞入（自右侧）→ 上方文字从左擦除、下方文字从右擦除"
+   },
+   {
+    "g": "item*",
+    "fx": [
+     "wipeL",
+     "wipeR"
+    ],
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "with"
+   }
+  ],
+  "imageText.pick": [
+   {
+    "g": "pic",
+    "fx": "flip",
+    "trig": "after",
+    "_from": "原第 7 页的动效：拨片照片翻转进入 → 投影 → 正文擦除 → 要点缩放"
+   },
+   {
+    "g": "picShadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "body",
+    "fx": "wipeL",
+    "trig": "after"
+   },
+   {
+    "g": "pt*",
+    "fx": "zoom",
+    "trig": "after",
+    "rest": "with"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "after"
+   }
+  ],
+  "imageText.panel": [
+   {
+    "g": "photo",
+    "fx": "bars",
+    "trig": "with",
+    "_from": "原第 10 页"
+   },
+   {
+    "g": "left",
+    "fx": "float",
+    "trig": "after"
+   },
+   {
+    "g": "right",
+    "fx": "descend",
+    "trig": "with"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "note",
+    "fx": "fade",
+    "trig": "with"
+   }
+  ],
+  "table.grid": [
+   {
+    "g": "table",
+    "fx": "wipeL",
+    "trig": "after",
+    "_from": "新设计，沿用原第 4 页面板的动效：从左擦除 → 投影淡入 → 文字擦除"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "after"
+   }
+  ],
+  "steps.arrows": [
+   {
+    "g": "arrows",
+    "fx": "flyL",
+    "trig": "after",
+    "_from": "原第 19 页：箭头组飞入（自左侧）→ 投影淡入 → 每条文字依次从左擦除"
+   },
+   {
+    "g": "shadow",
+    "fx": "fade",
+    "trig": "after"
+   },
+   {
+    "g": "item*",
+    "fx": "wipeL",
+    "trig": "after",
+    "rest": "after"
+   },
+   {
+    "g": "note",
+    "fx": "wipeL",
+    "trig": "after"
+   }
+  ],
+  "default": [
+   {
+    "g": "body",
+    "fx": "fade",
+    "trig": "after",
+    "_from": "兜底：淡化"
+   }
+  ]
+ }
+}

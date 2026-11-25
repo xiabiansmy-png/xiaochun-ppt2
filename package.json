@@ -1,0 +1,25 @@
+{
+  "name": "ppt-template-lib",
+  "version": "1.0.0",
+  "private": true,
+  "description": "多模板 PPT 生成系统：模板库 + 公共引擎",
+  "scripts": {
+    "setup": "node install.js",
+    "sync-skills": "node tools/sync-skills.js",
+    "skill-zips": "node tools/sync-skills.js --zip",
+    "render": "node core/render.js",
+    "selftest": "node core/selftest.js",
+    "select": "node core/select.js",
+    "cards": "node core/card.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0",
+    "sharp": "^0.33.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "undici": "^6.0.0"
+  }
+}

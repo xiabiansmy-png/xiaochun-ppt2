@@ -1,0 +1,126 @@
+{
+  "id": "sage-blossom",
+  "name": "莫兰迪花语",
+  "engine": "1.0",
+  "version": "1.0.0",
+  "description": "暖灰白底配灰绿与豆沙红色块、线描花叶，文艺清新的答辩汇报风",
+  "style": [
+    "文艺",
+    "清新",
+    "学术",
+    "简洁"
+  ],
+  "fits": [
+    "论文答辩",
+    "毕业答辩",
+    "开题报告",
+    "毕业汇报",
+    "课题汇报",
+    "学术汇报",
+    "读书分享",
+    "课程展示",
+    "文艺分享",
+    "花艺",
+    "生活方式"
+  ],
+  "avoid": [
+    "科技",
+    "党建",
+    "年终总结",
+    "国潮",
+    "金融",
+    "工业"
+  ],
+  "tone": "浅色",
+  "palette": [
+    "#747E6D",
+    "#B87271",
+    "#C4AE9C",
+    "#F0ECE9",
+    "#404040"
+  ],
+  "background": "F0ECE9",
+  "fonts": {
+    "head": "华文中宋",
+    "body": "微软雅黑"
+  },
+  "pageTypes": [
+    "cover",
+    "toc",
+    "section",
+    "points3",
+    "points4",
+    "compare",
+    "stats",
+    "timeline",
+    "imageText",
+    "quote",
+    "closing",
+    "table"
+  ],
+  "layouts": {
+    "cover": [
+      "bloom"
+    ],
+    "toc": [
+      "grid"
+    ],
+    "section": [
+      "bloom"
+    ],
+    "points3": [
+      "circles",
+      "panel"
+    ],
+    "points4": [
+      "cycle",
+      "numbered",
+      "around"
+    ],
+    "compare": [
+      "cards",
+      "duo"
+    ],
+    "stats": [
+      "numbers",
+      "chart"
+    ],
+    "timeline": [
+      "zigzag"
+    ],
+    "imageText": [
+      "side",
+      "panel"
+    ],
+    "quote": [
+      "leaf"
+    ],
+    "closing": [
+      "thanks"
+    ],
+    "table": [
+      "grid"
+    ]
+  },
+  "imageHeavy": true,
+  "imageStyle": "柔和自然光下的静物花艺与室内生活摄影：花束、干花、绿植、木桌、书本、白墙窗光，莫兰迪色调（灰绿、豆沙粉、米白），低饱和、温柔、留白多，带一点胶片质感。画面中不要出现任何文字、Logo 或水印。",
+  "defaultImage": "photo10.jpg",
+  "motion": "motion.json",
+  "preview": {
+    "cover": "preview/cover.jpg",
+    "samples": [
+      "preview/sample1.jpg",
+      "preview/sample2.jpg"
+    ],
+    "overview": "preview/overview.jpg",
+    "samplePages": [
+      6,
+      15
+    ]
+  },
+  "license": "版式、配色和装饰来自网络模板「文艺清新毕业论文答辩」（WPS 制作）；assets/ 里的花叶装饰和照片是原模板素材，仅限个人使用，分享或商用前需全部换成 AI 生成图。动效为新设计（原模板没有动画）",
+  "qa": {
+    "minBodyPt": 11,
+    "minPt": 9
+  }
+}
